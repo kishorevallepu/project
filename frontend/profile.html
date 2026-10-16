@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>My Profile - CareerGuide</title>
+
+
+    <!-- ================= BOOTSTRAP ================= -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+
+    <!-- ================= FONT AWESOME ================= -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <!-- ================= CUSTOM CSS ================= -->
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+
+    <style>
+
+        /* ================= PROFILE HEADER ================= */
+
+        .profile-header {
+
+            background: linear-gradient(
+                135deg,
+                #0d6efd,
+                #084298
+            );
+
+            color: white;
+
+            border-radius: 15px;
+
+            padding: 40px;
+
+        }
+
+
+        /* ================= PROFILE AVATAR ================= */
+
+        .profile-avatar {
+
+            width: 110px;
+
+            height: 110px;
+
+            border-radius: 50%;
+
+            background: white;
+
+            color: #0d6efd;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 50px;
+
+            margin: auto;
+
+        }
+
+
+        /* ================= PROFILE CARD ================= */
+
+        .profile-card {
+
+            border: none;
+
+            border-radius: 15px;
+
+            transition: 0.3s;
+
+        }
+
+
+        .profile-card:hover {
+
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 8px 25px rgba(0, 0, 0, 0.1);
+
+        }
+
+
+        /* ================= INFO ICON ================= */
+
+        .info-icon {
+
+            width: 40px;
+
+            height: 40px;
+
+            border-radius: 50%;
+
+            background: #e7f1ff;
+
+            color: #0d6efd;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+        }
+
+
+        /* ================= PROGRESS ================= */
+
+        .progress {
+
+            height: 10px;
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- ===================================================== -->
+<!-- ====================== NAVBAR ====================== -->
+<!-- ===================================================== -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+
+    <div class="container">
+
+
+        <!-- LOGO -->
+
+        <a class="navbar-brand fw-bold"
+           href="index.html">
+
+            <i class="fa-solid fa-graduation-cap"></i>
+
+            CareerGuide
+
+        </a>
+
+
+        <!-- MOBILE BUTTON -->
+
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-label="Toggle navigation">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <!-- NAVIGATION -->
+
+        <div class="collapse navbar-collapse"
+             id="navbarNav">
+
+            <ul class="navbar-nav ms-auto">
+
+
+                <!-- HOME -->
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                       href="index.html">
+
+                        <i class="fa-solid fa-house"></i>
+
+                        Home
+
+                    </a>
+
+                </li>
+
+
+                <!-- PROFILE -->
+
+                <li class="nav-item">
+
+                    <a class="nav-link active"
+                       href="profile.html">
+
+                        <i class="fa-solid fa-user"></i>
+
+                        Profile
+
+                    </a>
+
+                </li>
+
+
+                <!-- ASSESSMENT -->
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                       href="assessment.html">
+
+                        <i class="fa-solid fa-clipboard-question"></i>
+
+                        Assessment
+
+                    </a>
+
+                </li>
+                <!-- Result -->
+
+             <li class="nav-item">
+
+                    <a class="nav-link"
+                       href="result.html">
+
+                        <i class="fa-solid fa-book"></i>
+
+                        Result
+
+                    </a>
+
+                </li>
+                <!-- Careers -->
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                       href="career.html">
+
+                        <i class="fa-solid fa-book"></i>
+
+                        Careers
+
+                    </a>
+
+                </li>
+
+                <!-- COURSES -->
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                       href="courses.html">
+
+                        <i class="fa-solid fa-book"></i>
+
+                        Courses
+
+                    </a>
+
+                </li>
+
+
+                <!-- LOGOUT -->
+
+                <li class="nav-item ms-lg-2">
+
+                    <a class="btn btn-light text-primary"
+                       href="login.html"
+                              onclick="logoutUser(); return false;">
+
+                        <i class="fa-solid fa-right-from-bracket"></i>
+
+                        Logout
+
+                    </a>
+
+                </li>
+
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- ===================================================== -->
+<!-- ================= PROFILE SECTION =================== -->
+<!-- ===================================================== -->
+
+<section class="py-5 bg-light">
+
+    <div class="container">
+
+
+        <!-- ================================================= -->
+        <!-- ================= PROFILE HEADER ================ -->
+        <!-- ================================================= -->
+
+        <div class="profile-header shadow mb-4">
+
+            <div class="row align-items-center">
+
+
+                <!-- AVATAR -->
+
+                <div class="col-md-3 text-center">
+
+                    <div class="profile-avatar">
+
+                        <i class="fa-solid fa-user"></i>
+
+                    </div>
+
+                </div>
+
+
+                <!-- USER INFORMATION -->
+
+                <div class="col-md-9
+                            text-center
+                            text-md-start
+                            mt-3
+                            mt-md-0">
+
+
+                    <h2 class="fw-bold mb-1">
+
+                        Welcome,
+
+                        <span id="headerName">
+                            Student
+                        </span>!
+
+                    </h2>
+
+
+                    <p class="mb-2">
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                        <span id="headerEmail">
+                            Loading...
+                        </span>
+
+                    </p>
+
+
+                    <span class="badge bg-light text-primary">
+
+                        <i class="fa-solid fa-user-graduate"></i>
+
+                        Student
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================================================= -->
+        <!-- ================= MAIN ROW ====================== -->
+        <!-- ================================================= -->
+
+        <div class="row g-4">
+
+
+
+            <!-- ================================================= -->
+            <!-- ============== PERSONAL INFORMATION ============= -->
+            <!-- ================================================= -->
+
+            <div class="col-lg-7">
+
+                <div class="card profile-card shadow-sm h-100">
+
+                    <div class="card-body p-4">
+
+
+                        <!-- TITLE -->
+
+                        <div class="d-flex
+                                    justify-content-between
+                                    align-items-center
+                                    mb-4">
+
+
+                            <h4 class="fw-bold mb-0">
+
+                                <i class="fa-solid
+                                          fa-id-card
+                                          text-primary"></i>
+
+                                Personal Information
+
+                            </h4>
+
+
+                            <button class="btn
+                                           btn-outline-primary
+                                           btn-sm"
+                                    onclick="editProfile()">
+
+                                <i class="fa-solid fa-pen"></i>
+
+                                Edit
+
+                            </button>
+
+                        </div>
+
+
+
+                        <!-- ================================================= -->
+                        <!-- NAME -->
+                        <!-- ================================================= -->
+
+                        <div class="d-flex
+                                    align-items-center
+                                    mb-4">
+
+
+                            <div class="info-icon me-3">
+
+                                <i class="fa-solid fa-user"></i>
+
+                            </div>
+
+
+                            <div>
+
+                                <small class="text-muted">
+
+                                    Full Name
+
+                                </small>
+
+
+                                <div class="fw-semibold"
+                                     id="profileName">
+
+                                    Loading...
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- ================================================= -->
+                        <!-- EMAIL -->
+                        <!-- ================================================= -->
+
+                        <div class="d-flex
+                                    align-items-center
+                                    mb-4">
+
+
+                            <div class="info-icon me-3">
+
+                                <i class="fa-solid fa-envelope"></i>
+
+                            </div>
+
+
+                            <div>
+
+                                <small class="text-muted">
+
+                                    Email Address
+
+                                </small>
+
+
+                                <div class="fw-semibold"
+                                     id="profileEmail">
+
+                                    Loading...
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- ================================================= -->
+                        <!-- PHONE -->
+                        <!-- ================================================= -->
+
+                        <div class="d-flex
+                                    align-items-center
+                                    mb-4">
+
+
+                            <div class="info-icon me-3">
+
+                                <i class="fa-solid fa-phone"></i>
+
+                            </div>
+
+
+                            <div>
+
+                                <small class="text-muted">
+
+                                    Phone Number
+
+                                </small>
+
+
+                                <div class="fw-semibold"
+                                     id="profilePhone">
+
+                                    Loading...
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- ================================================= -->
+                        <!-- EDUCATION -->
+                        <!-- ================================================= -->
+
+                        <div class="d-flex
+                                    align-items-center">
+
+
+                            <div class="info-icon me-3">
+
+                                <i class="fa-solid fa-graduation-cap"></i>
+
+                            </div>
+
+
+                            <div>
+
+                                <small class="text-muted">
+
+                                    Education
+
+                                </small>
+
+
+                                <div class="fw-semibold"
+                                     id="profileEducation">
+
+                                    Loading...
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================================================= -->
+            <!-- ============== ASSESSMENT STATUS ================= -->
+            <!-- ================================================= -->
+
+            <div class="col-lg-5">
+
+                <div class="card profile-card shadow-sm h-100">
+
+                    <div class="card-body p-4">
+
+
+                        <h4 class="fw-bold mb-4">
+
+                            <i class="fa-solid
+                                      fa-chart-pie
+                                      text-primary"></i>
+
+                            Assessment Status
+
+                        </h4>
+
+
+                        <div class="text-center mb-4">
+
+
+                               <div class="display-4
+                                        fw-bold
+                                        text-primary"
+                                   id="assessmentProgressText">
+
+                                0%
+
+                            </div>
+
+
+                            <p class="text-muted"
+                               id="assessmentStatusLabel">
+
+                                Assessment not completed
+
+                            </p>
+
+                        </div>
+
+
+                        <div class="progress mb-4">
+
+                               <div class="progress-bar"
+                                   id="assessmentProgress"
+                                 role="progressbar"
+                                   aria-label="Assessment completion">
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="d-grid">
+
+                            <a href="assessment.html"
+                               class="btn btn-primary">
+
+                                <i class="fa-solid fa-play"></i>
+
+                                Start RIASEC Assessment
+
+                            </a>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================================================= -->
+            <!-- ============== CAREER RECOMMENDATION ============= -->
+            <!-- ================================================= -->
+
+            <div class="col-12">
+
+                <div class="card profile-card shadow-sm">
+
+                    <div class="card-body p-4">
+
+
+                        <div class="row align-items-center">
+
+
+                            <div class="col-md-8">
+
+
+                                <h4 class="fw-bold">
+
+                                    <i class="fa-solid
+                                              fa-briefcase
+                                              text-primary"></i>
+
+                                    Career Recommendation
+
+                                </h4>
+
+
+                                <p class="text-muted mb-md-0">
+
+                                    Complete your RIASEC assessment
+                                    to receive personalized career
+                                    recommendations.
+
+                                </p>
+
+                            </div>
+
+
+                            <div class="col-md-4
+                                        text-md-end
+                                        mt-3
+                                        mt-md-0">
+
+
+                                <a href="assessment.html"
+                                   class="btn btn-outline-primary">
+
+                                    Take Assessment
+
+                                </a>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ===================================================== -->
+<!-- ====================== FOOTER ====================== -->
+<!-- ===================================================== -->
+
+<footer class="bg-dark text-white py-4">
+
+    <div class="container text-center">
+
+
+        <h5>
+
+            <i class="fa-solid fa-graduation-cap"></i>
+
+            CareerGuide
+
+        </h5>
+
+
+        <p class="mb-1">
+
+            Career Guidance and Recommendation System
+
+        </p>
+
+
+        <small class="text-secondary">
+
+            © 2026 CareerGuide. All Rights Reserved.
+
+        </small>
+
+
+    </div>
+
+</footer>
+
+
+
+<!-- ===================================================== -->
+<!-- ================= BOOTSTRAP JS ===================== -->
+<!-- ===================================================== -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+
+<!-- ===================================================== -->
+<!-- ================= PROFILE JAVASCRIPT ================ -->
+<!-- ===================================================== -->
+
+<div class="modal fade" id="editProfileModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <form id="profileEditForm">
+                <div class="modal-header">
+                    <h5 class="modal-title">Edit Profile</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="editProfileName" class="form-label">Full name</label>
+                        <input id="editProfileName" class="form-control" type="text" required maxlength="120">
+                    </div>
+                    <div class="mb-3">
+                        <label for="editProfilePhone" class="form-label">Phone number</label>
+                        <input id="editProfilePhone" class="form-control" type="tel" maxlength="30">
+                    </div>
+                    <div>
+                        <label for="editProfileEducation" class="form-label">Education</label>
+                        <input id="editProfileEducation" class="form-control" type="text" maxlength="160">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+
+let currentUser = null;
+
+function renderProfile(user) {
+
+    document.getElementById("headerName").textContent = user.name || "Student";
+    document.getElementById("headerEmail").textContent = user.email || "No email";
+    document.getElementById("profileName").textContent = user.name || "Not available";
+    document.getElementById("profileEmail").textContent = user.email || "Not available";
+    document.getElementById("profilePhone").textContent = user.phone || "Not available";
+    document.getElementById("profileEducation").textContent = user.education || "Not available";
+
+}
+
+document.addEventListener("DOMContentLoaded", async function () {
+
+    try {
+
+        const response = await fetch(
+            "http://127.0.0.1:5000/profile",
+            { credentials: "include" }
+        );
+
+        if (response.status === 401) {
+            window.location.href = "login.html";
+            return;
+        }
+
+        const data = await response.json();
+
+        if (!response.ok || !data.success) {
+            throw new Error(data.message || "Could not load profile.");
+        }
+
+        currentUser = data.user;
+        localStorage.setItem("user", JSON.stringify(currentUser));
+        renderProfile(currentUser);
+
+        const assessmentResponse = await fetch(
+            "http://127.0.0.1:5000/assessment/latest",
+            { credentials: "include" }
+        );
+
+        if (assessmentResponse.ok) {
+            const assessmentData = await assessmentResponse.json();
+            const completed = Boolean(assessmentData.assessment);
+            document.getElementById("assessmentProgressText").textContent =
+                completed ? "100%" : "0%";
+            document.getElementById("assessmentStatusLabel").textContent =
+                completed ? "Assessment completed" : "Assessment not completed";
+            document.getElementById("assessmentProgress").style.width =
+                completed ? "100%" : "0%";
+        }
+
+    } catch (error) {
+
+        alert(error instanceof TypeError
+            ? "Could not connect to the backend. Make sure Flask is running."
+            : error.message);
+
+    }
+
+});
+
+
+function editProfile() {
+
+    if (!currentUser) {
+        return;
+    }
+
+    document.getElementById("editProfileName").value = currentUser.name || "";
+    document.getElementById("editProfilePhone").value = currentUser.phone || "";
+    document.getElementById("editProfileEducation").value = currentUser.education || "";
+    bootstrap.Modal.getOrCreateInstance(
+        document.getElementById("editProfileModal")
+    ).show();
+
+}
+
+
+document.getElementById("profileEditForm")
+    .addEventListener("submit", async function (event) {
+
+        event.preventDefault();
+
+        const form = event.currentTarget;
+        const submitButton = form.querySelector("button[type='submit']");
+        submitButton.disabled = true;
+
+        try {
+
+            const response = await fetch(
+                "http://127.0.0.1:5000/profile",
+                {
+                    method: "PUT",
+                    credentials: "include",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                        name: document.getElementById("editProfileName").value.trim(),
+                        phone: document.getElementById("editProfilePhone").value.trim(),
+                        education: document.getElementById("editProfileEducation").value.trim()
+                    })
+                }
+            );
+
+            const data = await response.json();
+
+            if (!response.ok || !data.success) {
+                throw new Error(data.message || "Could not save profile.");
+            }
+
+            currentUser = data.user;
+            localStorage.setItem("user", JSON.stringify(currentUser));
+            renderProfile(currentUser);
+            bootstrap.Modal.getInstance(
+                document.getElementById("editProfileModal")
+            ).hide();
+
+        } catch (error) {
+
+            alert(error instanceof TypeError
+                ? "Could not connect to the backend. Make sure Flask is running."
+                : error.message);
+
+        } finally {
+
+            submitButton.disabled = false;
+
+        }
+
+    });
+
+
+async function logoutUser() {
+
+    try {
+
+        await fetch(
+            "http://127.0.0.1:5000/logout",
+            {
+                method: "POST",
+                credentials: "include"
+            }
+        );
+
+    } finally {
+
+        localStorage.removeItem("user");
+        localStorage.removeItem("riasecScores");
+        window.location.href = "login.html";
+
+    }
+
+}
+
+</script>
+
+
+</body>
+
+</html>

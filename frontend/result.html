@@ -1,0 +1,1515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>RIASEC Result - CareerGuide</title>
+
+
+    <!-- Bootstrap -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+
+    <!-- Font Awesome -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <!-- Custom CSS -->
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+
+    <style>
+
+        body {
+
+            background: #f5f7fb;
+
+        }
+
+
+        /* ================= NAVBAR ================= */
+
+        .navbar-brand {
+
+            letter-spacing: 0.3px;
+
+        }
+
+
+        /* ================= HEADER ================= */
+
+        .result-header {
+
+            background: linear-gradient(
+                135deg,
+                #0d6efd,
+                #084298
+            );
+
+            color: white;
+
+            border-radius: 18px;
+
+        }
+
+
+        .result-header h1 {
+
+            font-size: 2rem;
+
+        }
+
+
+        /* ================= MAIN RESULT ================= */
+
+        .main-result {
+
+            border-radius: 20px;
+
+            background: white;
+
+            border: none;
+
+        }
+
+
+        .main-letter {
+
+            width: 125px;
+
+            height: 125px;
+
+            border-radius: 50%;
+
+            background: linear-gradient(
+                135deg,
+                #0d6efd,
+                #084298
+            );
+
+            color: white;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 55px;
+
+            font-weight: bold;
+
+            margin: auto;
+
+            box-shadow:
+                0 10px 30px
+                rgba(13, 110, 253, 0.25);
+
+        }
+
+
+        .riasec-code {
+
+            font-size: 22px;
+
+            letter-spacing: 8px;
+
+        }
+
+
+        /* ================= SCORE CARD ================= */
+
+        .score-card {
+
+            border: none;
+
+            border-radius: 16px;
+
+            transition: all 0.3s ease;
+
+            background: white;
+
+        }
+
+
+        .score-card:hover {
+
+            transform: translateY(-6px);
+
+            box-shadow:
+                0 12px 25px
+                rgba(0, 0, 0, 0.12);
+
+        }
+
+
+        .score-letter {
+
+            width: 65px;
+
+            height: 65px;
+
+            border-radius: 50%;
+
+            background: #e7f1ff;
+
+            color: #0d6efd;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 28px;
+
+            font-weight: bold;
+
+            margin: auto;
+
+        }
+
+
+        .score-value {
+
+            font-size: 28px;
+
+        }
+
+
+        .progress {
+
+            height: 8px;
+
+            border-radius: 10px;
+
+        }
+
+
+        .progress-bar {
+
+            border-radius: 10px;
+
+        }
+
+
+        /* ================= CAREER BOX ================= */
+
+        .career-box {
+
+            border: none;
+
+            border-left: 5px solid #0d6efd;
+
+            background: white;
+
+            padding: 25px;
+
+            border-radius: 12px;
+
+        }
+
+
+        .career-item {
+
+            background: #f8f9fa;
+
+            border-radius: 10px;
+
+            padding: 15px;
+
+            height: 100%;
+
+            transition: 0.25s;
+
+        }
+
+
+        .career-item:hover {
+
+            background: #e7f1ff;
+
+            transform: translateX(5px);
+
+        }
+
+
+        /* ================= TOP TYPE ================= */
+
+        .type-box {
+
+            border-radius: 15px;
+
+            background: #e7f1ff;
+
+        }
+
+
+        .result-description {
+
+            max-width: 750px;
+
+        }
+
+
+        .result-type-box {
+
+            max-width: 450px;
+
+        }
+
+
+        .type-letter {
+
+            font-size: 20px;
+
+            font-weight: bold;
+
+            color: #0d6efd;
+
+        }
+
+
+        /* ================= BUTTONS ================= */
+
+        .action-btn {
+
+            min-width: 210px;
+
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        footer {
+
+            margin-top: 30px;
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- ===================================================== -->
+<!-- NAVBAR -->
+<!-- ===================================================== -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+
+    <div class="container">
+
+
+        <a class="navbar-brand fw-bold"
+           href="index.html">
+
+            <i class="fa-solid fa-graduation-cap"></i>
+
+            CareerGuide
+
+        </a>
+
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-label="Toggle navigation">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <div class="collapse navbar-collapse"
+             id="navbarNav">
+
+
+            <ul class="navbar-nav ms-auto">
+
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                       href="index.html">
+
+                        Home
+
+                    </a>
+
+                </li>
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                       href="profile.html">
+
+                        Profile
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                       href="assessment.html">
+
+                        Assessment
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a class="nav-link active"
+                       href="result.html">
+
+                        Result
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                       href="career.html">
+
+                        Careers
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                       href="courses.html">
+
+                        Courses
+
+                    </a>
+
+                </li>
+
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- ===================================================== -->
+<!-- HEADER -->
+<!-- ===================================================== -->
+
+<section class="py-4">
+
+    <div class="container">
+
+
+        <div class="result-header shadow p-4 p-md-5">
+
+
+            <h1 class="fw-bold">
+
+                <i class="fa-solid fa-chart-column me-2"></i>
+
+                Your RIASEC Result
+
+            </h1>
+
+
+            <p class="mb-0">
+
+                Your career-interest profile has been
+                generated from your RIASEC assessment.
+
+            </p>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ===================================================== -->
+<!-- MAIN RESULT -->
+<!-- ===================================================== -->
+
+<section class="pb-4">
+
+    <div class="container">
+
+
+        <div class="main-result shadow-sm p-4 p-md-5 text-center">
+
+
+            <!-- MAIN LETTER -->
+
+            <div class="main-letter"
+                 id="mainLetter">
+
+                -
+
+            </div>
+
+
+            <!-- TYPE -->
+
+            <h2 class="fw-bold mt-4"
+                id="mainType">
+
+                Calculating...
+
+            </h2>
+
+
+            <!-- DESCRIPTION -->
+
+                <p class="text-muted mx-auto result-description"
+               id="mainDescription">
+
+                Please wait while your result is calculated.
+
+            </p>
+
+
+            <!-- HIGHEST SCORE -->
+
+            <div class="mt-3">
+
+                <span class="badge bg-primary fs-6">
+
+                    Highest Score:
+
+                    <span id="highestScore">
+
+                        0
+
+                    </span>
+
+                    / 20
+
+                </span>
+
+            </div>
+
+
+            <!-- TOP 3 CODE -->
+
+              <div class="type-box result-type-box p-3 mt-4 mx-auto">
+
+                <div class="text-muted small">
+
+                    Your RIASEC Career Code
+
+                </div>
+
+
+                <div class="type-letter riasec-code"
+                     id="riasecCode">
+
+                    ------
+
+                </div>
+
+
+                <small class="text-muted">
+
+                    Based on your three highest interest areas
+
+                </small>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ===================================================== -->
+<!-- SCORES -->
+<!-- ===================================================== -->
+
+<section class="pb-5">
+
+    <div class="container">
+
+
+        <h3 class="fw-bold text-center mb-4">
+
+            <i class="fa-solid fa-chart-simple me-2"></i>
+
+            Your RIASEC Scores
+
+        </h3>
+
+
+        <div class="row g-4">
+
+
+            <!-- ================= R ================= -->
+
+            <div class="col-6 col-md-4 col-lg-2">
+
+                <div class="card score-card shadow-sm text-center h-100">
+
+                    <div class="card-body">
+
+
+                        <div class="score-letter">
+
+                            R
+
+                        </div>
+
+
+                        <h6 class="mt-3">
+
+                            Realistic
+
+                        </h6>
+
+
+                        <h3 class="fw-bold score-value"
+                            id="scoreR">
+
+                            0
+
+                        </h3>
+
+
+                        <div class="progress">
+
+                            <div
+                                class="progress-bar"
+                                id="progressR">
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= I ================= -->
+
+            <div class="col-6 col-md-4 col-lg-2">
+
+                <div class="card score-card shadow-sm text-center h-100">
+
+                    <div class="card-body">
+
+
+                        <div class="score-letter">
+
+                            I
+
+                        </div>
+
+
+                        <h6 class="mt-3">
+
+                            Investigative
+
+                        </h6>
+
+
+                        <h3 class="fw-bold score-value"
+                            id="scoreI">
+
+                            0
+
+                        </h3>
+
+
+                        <div class="progress">
+
+                            <div
+                                class="progress-bar"
+                                id="progressI">
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= A ================= -->
+
+            <div class="col-6 col-md-4 col-lg-2">
+
+                <div class="card score-card shadow-sm text-center h-100">
+
+                    <div class="card-body">
+
+
+                        <div class="score-letter">
+
+                            A
+
+                        </div>
+
+
+                        <h6 class="mt-3">
+
+                            Artistic
+
+                        </h6>
+
+
+                        <h3 class="fw-bold score-value"
+                            id="scoreA">
+
+                            0
+
+                        </h3>
+
+
+                        <div class="progress">
+
+                            <div
+                                class="progress-bar"
+                                id="progressA">
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= S ================= -->
+
+            <div class="col-6 col-md-4 col-lg-2">
+
+                <div class="card score-card shadow-sm text-center h-100">
+
+                    <div class="card-body">
+
+
+                        <div class="score-letter">
+
+                            S
+
+                        </div>
+
+
+                        <h6 class="mt-3">
+
+                            Social
+
+                        </h6>
+
+
+                        <h3 class="fw-bold score-value"
+                            id="scoreS">
+
+                            0
+
+                        </h3>
+
+
+                        <div class="progress">
+
+                            <div
+                                class="progress-bar"
+                                id="progressS">
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= E ================= -->
+
+            <div class="col-6 col-md-4 col-lg-2">
+
+                <div class="card score-card shadow-sm text-center h-100">
+
+                    <div class="card-body">
+
+
+                        <div class="score-letter">
+
+                            E
+
+                        </div>
+
+
+                        <h6 class="mt-3">
+
+                            Enterprising
+
+                        </h6>
+
+
+                        <h3 class="fw-bold score-value"
+                            id="scoreE">
+
+                            0
+
+                        </h3>
+
+
+                        <div class="progress">
+
+                            <div
+                                class="progress-bar"
+                                id="progressE">
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= C ================= -->
+
+            <div class="col-6 col-md-4 col-lg-2">
+
+                <div class="card score-card shadow-sm text-center h-100">
+
+                    <div class="card-body">
+
+
+                        <div class="score-letter">
+
+                            C
+
+                        </div>
+
+
+                        <h6 class="mt-3">
+
+                            Conventional
+
+                        </h6>
+
+
+                        <h3 class="fw-bold score-value"
+                            id="scoreC">
+
+                            0
+
+                        </h3>
+
+
+                        <div class="progress">
+
+                            <div
+                                class="progress-bar"
+                                id="progressC">
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ===================================================== -->
+<!-- CAREER DIRECTION -->
+<!-- ===================================================== -->
+
+<section class="bg-light py-5">
+
+    <div class="container">
+
+
+        <h3 class="fw-bold text-center mb-4">
+
+            <i class="fa-solid fa-briefcase me-2"></i>
+
+            Career Direction
+
+        </h3>
+
+
+        <div class="career-box shadow-sm">
+
+
+            <h4 class="fw-bold"
+                id="careerTitle">
+
+                Career Options
+
+            </h4>
+
+
+            <p class="text-muted"
+               id="careerDescription">
+
+                Your recommended careers will appear here.
+
+            </p>
+
+
+            <div id="careerList"
+                 class="row g-3">
+
+            </div>
+
+
+        </div>
+
+
+        <!-- ================================================= -->
+        <!-- ACTION BUTTONS -->
+        <!-- ================================================= -->
+
+        <div class="text-center mt-5">
+
+
+            <a
+                href="career.html"
+                class="btn btn-primary btn-lg action-btn m-2">
+
+                <i class="fa-solid fa-briefcase me-2"></i>
+
+                Career Recommendations
+
+            </a>
+
+
+            <a
+                href="courses.html"
+                class="btn btn-success btn-lg action-btn m-2">
+
+                <i class="fa-solid fa-book-open me-2"></i>
+
+                Recommended Courses
+
+            </a>
+
+
+            <a
+                href="assessment.html"
+                class="btn btn-outline-secondary btn-lg action-btn m-2">
+
+                <i class="fa-solid fa-rotate me-2"></i>
+
+                Retake Assessment
+
+            </a>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ===================================================== -->
+<!-- FOOTER -->
+<!-- ===================================================== -->
+
+<footer class="bg-dark text-white py-4">
+
+    <div class="container text-center">
+
+
+        <h5>
+
+            <i class="fa-solid fa-graduation-cap me-2"></i>
+
+            CareerGuide
+
+        </h5>
+
+
+        <p class="mb-1">
+
+            Career Guidance and Recommendation System
+
+        </p>
+
+
+        <small class="text-secondary">
+
+            © 2026 CareerGuide. All Rights Reserved.
+
+        </small>
+
+
+    </div>
+
+</footer>
+
+
+
+<!-- Bootstrap JS -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+
+<!-- ===================================================== -->
+<!-- RESULT JAVASCRIPT -->
+<!-- ===================================================== -->
+
+<script>
+
+
+/* ===================================================== */
+/* GET SAVED SCORES */
+/* ===================================================== */
+
+const savedScores =
+    localStorage.getItem("riasecScores");
+
+
+/* ===================================================== */
+/* CHECK DATA */
+/* ===================================================== */
+
+if (!savedScores) {
+
+    alert(
+        "Please complete the RIASEC assessment first."
+    );
+
+    window.location.href =
+        "assessment.html";
+
+}
+
+
+/* ===================================================== */
+/* CONVERT JSON */
+/* ===================================================== */
+
+let scores = { R: 0, I: 0, A: 0, S: 0, E: 0, C: 0 };
+
+try {
+
+    if (savedScores) {
+
+        const parsedScores = JSON.parse(savedScores);
+        const scoreTypes = ["R", "I", "A", "S", "E", "C"];
+
+        if (
+            !parsedScores ||
+            typeof parsedScores !== "object" ||
+            scoreTypes.some(function(type) {
+                return !Number.isFinite(Number(parsedScores[type]));
+            })
+        ) {
+            throw new Error("Invalid assessment scores");
+        }
+
+        scoreTypes.forEach(function(type) {
+            scores[type] = Number(parsedScores[type]);
+        });
+
+    }
+
+} catch (error) {
+
+    alert(
+        "Invalid assessment result. Please retake the assessment."
+    );
+
+    localStorage.removeItem("riasecScores");
+
+    window.location.replace("assessment.html");
+
+}
+
+
+
+/* ===================================================== */
+/* RIASEC TYPES */
+/* ===================================================== */
+
+const types = [
+
+    "R",
+    "I",
+    "A",
+    "S",
+    "E",
+    "C"
+
+];
+
+
+
+/* ===================================================== */
+/* VALIDATE SCORES */
+/* ===================================================== */
+
+types.forEach(function(type) {
+
+    if (
+        typeof scores[type] !== "number" ||
+        isNaN(scores[type])
+    ) {
+
+        scores[type] = 0;
+
+    }
+
+});
+
+
+
+/* ===================================================== */
+/* DISPLAY SCORES */
+/* ===================================================== */
+
+types.forEach(function(type) {
+
+    document.getElementById(
+        "score" + type
+    ).textContent =
+        scores[type];
+
+});
+
+
+
+/* ===================================================== */
+/* PROGRESS BARS */
+/* ===================================================== */
+
+types.forEach(function(type) {
+
+    let percentage =
+        (scores[type] / 20) * 100;
+
+
+    if (percentage > 100) {
+
+        percentage = 100;
+
+    }
+
+
+    if (percentage < 0) {
+
+        percentage = 0;
+
+    }
+
+
+    document.getElementById(
+        "progress" + type
+    ).style.width =
+        percentage + "%";
+
+});
+
+
+
+/* ===================================================== */
+/* SORT RIASEC SCORES */
+/* ===================================================== */
+
+const sortedTypes =
+    [...types].sort(function(a, b) {
+
+        return scores[b] - scores[a];
+
+    });
+
+
+
+/* ===================================================== */
+/* TOP 3 TYPES */
+/* ===================================================== */
+
+const topThree =
+    sortedTypes.slice(0, 3);
+
+
+
+/* ===================================================== */
+/* HIGHEST TYPE */
+/* ===================================================== */
+
+const highestType =
+    topThree[0];
+
+
+const highestScore =
+    scores[highestType];
+
+
+
+/* ===================================================== */
+/* RIASEC INFORMATION */
+/* ===================================================== */
+
+const riasecInfo = {
+
+
+    R: {
+
+        name: "Realistic",
+
+        description:
+            "You prefer practical, hands-on activities and enjoy working with tools, machines, equipment and physical environments.",
+
+        careers: [
+
+            "Mechanical Engineer",
+
+            "Civil Engineer",
+
+            "Electrical Technician",
+
+            "Automobile Engineer",
+
+            "Agricultural Officer"
+
+        ]
+
+    },
+
+
+    I: {
+
+        name: "Investigative",
+
+        description:
+            "You enjoy analyzing information, solving problems, conducting research and understanding how things work.",
+
+        careers: [
+
+            "Software Developer",
+
+            "Data Analyst",
+
+            "Research Scientist",
+
+            "Doctor",
+
+            "Engineer"
+
+        ]
+
+    },
+
+
+    A: {
+
+        name: "Artistic",
+
+        description:
+            "You enjoy creativity, self-expression, design, writing, music and activities that allow you to think differently.",
+
+        careers: [
+
+            "Graphic Designer",
+
+            "UI/UX Designer",
+
+            "Writer",
+
+            "Animator",
+
+            "Content Creator"
+
+        ]
+
+    },
+
+
+    S: {
+
+        name: "Social",
+
+        description:
+            "You enjoy helping, teaching, supporting and communicating with other people.",
+
+        careers: [
+
+            "Teacher",
+
+            "Counselor",
+
+            "Social Worker",
+
+            "HR Professional",
+
+            "Trainer"
+
+        ]
+
+    },
+
+
+    E: {
+
+        name: "Enterprising",
+
+        description:
+            "You enjoy leadership, decision-making, persuasion, business activities and taking responsibility.",
+
+        careers: [
+
+            "Entrepreneur",
+
+            "Business Manager",
+
+            "Sales Manager",
+
+            "Marketing Manager",
+
+            "Bank Manager"
+
+        ]
+
+    },
+
+
+    C: {
+
+        name: "Conventional",
+
+        description:
+            "You prefer organized environments and enjoy working with records, numbers, information and structured procedures.",
+
+        careers: [
+
+            "Accountant",
+
+            "Banking Professional",
+
+            "Data Entry Specialist",
+
+            "Office Administrator",
+
+            "Financial Analyst"
+
+        ]
+
+    }
+
+};
+
+
+
+/* ===================================================== */
+/* GET RESULT INFORMATION */
+/* ===================================================== */
+
+const result =
+    riasecInfo[highestType];
+
+
+
+/* ===================================================== */
+/* DISPLAY MAIN RESULT */
+/* ===================================================== */
+
+document.getElementById(
+    "mainLetter"
+).textContent =
+    highestType;
+
+
+document.getElementById(
+    "mainType"
+).textContent =
+    result.name;
+
+
+document.getElementById(
+    "mainDescription"
+).textContent =
+    result.description;
+
+
+document.getElementById(
+    "highestScore"
+).textContent =
+    highestScore;
+
+
+
+/* ===================================================== */
+/* DISPLAY RIASEC CODE */
+/* ===================================================== */
+
+document.getElementById(
+    "riasecCode"
+).textContent =
+    topThree.join("");
+
+
+
+/* ===================================================== */
+/* SAVE TOP 3 RESULT */
+/* ===================================================== */
+
+localStorage.setItem(
+    "riasecTopCode",
+    topThree.join("")
+);
+
+
+localStorage.setItem(
+    "riasecMainType",
+    highestType
+);
+
+
+
+/* ===================================================== */
+/* CAREER TITLE */
+/* ===================================================== */
+
+document.getElementById(
+    "careerTitle"
+).textContent =
+    result.name +
+    " Career Paths";
+
+
+
+document.getElementById(
+    "careerDescription"
+).textContent =
+    "Based on your strongest RIASEC interest area, the following career paths may be suitable for you.";
+
+
+
+/* ===================================================== */
+/* DISPLAY CAREERS */
+/* ===================================================== */
+
+const careerList =
+    document.getElementById(
+        "careerList"
+    );
+
+
+result.careers.forEach(function(career) {
+
+
+    const div =
+        document.createElement("div");
+
+
+    div.className =
+        "col-md-6 col-lg-4";
+
+
+    div.innerHTML = `
+
+        <div class="career-item shadow-sm">
+
+            <i class="fa-solid fa-circle-check text-primary me-2"></i>
+
+            <strong>
+
+                ${career}
+
+            </strong>
+
+        </div>
+
+    `;
+
+
+    careerList.appendChild(div);
+
+});
+
+
+</script>
+
+
+</body>
+
+</html>

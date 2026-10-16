@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>Careers - CareerGuide</title>
+
+<!-- Bootstrap CSS -->
+<link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet">
+
+<!-- Font Awesome -->
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<!-- Google Font -->
+<link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+<style>
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: #f5f7fb;
+        color: #333;
+    }
+
+    /* Navbar */
+
+    .navbar {
+        background: #0d6efd;
+        padding: 15px 0;
+    }
+
+    .navbar-brand {
+        color: white !important;
+        font-size: 25px;
+        font-weight: 700;
+    }
+
+    .navbar-nav .nav-link {
+        color: white !important;
+        margin-left: 15px;
+        font-weight: 500;
+    }
+
+    .navbar-nav .nav-link:hover {
+        color: #dbeafe !important;
+    }
+
+    /* Hero */
+
+    .hero {
+        background: linear-gradient(135deg, #0d6efd, #4f46e5);
+        color: white;
+        padding: 70px 20px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+        font-weight: 700;
+    }
+
+    .hero p {
+        font-size: 18px;
+        margin-top: 15px;
+    }
+
+    /* Search */
+
+    .search-box {
+        max-width: 700px;
+        margin: -30px auto 50px;
+        background: white;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 5px 25px rgba(0,0,0,0.12);
+        position: relative;
+    }
+
+    .search-box input {
+        height: 50px;
+        border-radius: 10px;
+    }
+
+    /* Section */
+
+    .section-title {
+        text-align: center;
+        margin-bottom: 35px;
+    }
+
+    .section-title h2 {
+        font-weight: 700;
+        color: #222;
+    }
+
+    .section-title p {
+        color: #777;
+    }
+
+    /* RIASEC */
+
+    .riasec-card {
+        background: white;
+        border-radius: 15px;
+        padding: 25px;
+        text-align: center;
+        height: 100%;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        transition: 0.3s;
+    }
+
+    .riasec-card:hover {
+        transform: translateY(-6px);
+    }
+
+    .riasec-icon {
+        width: 60px;
+        height: 60px;
+        background: #e8f1ff;
+        color: #0d6efd;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto auto 15px;
+        font-size: 25px;
+    }
+
+    .riasec-card h5 {
+        font-weight: 600;
+    }
+
+    /* Career Cards */
+
+    .career-card {
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        height: 100%;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        transition: 0.3s;
+    }
+
+    .career-card:hover {
+        transform: translateY(-7px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.13);
+    }
+
+    .career-header {
+        background: #0d6efd;
+        color: white;
+        padding: 25px;
+        text-align: center;
+    }
+
+    .career-header i {
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+
+    .career-header h4 {
+        font-weight: 600;
+    }
+
+    .career-body {
+        padding: 25px;
+    }
+
+    .career-body p {
+        color: #666;
+    }
+
+    .info {
+        margin: 10px 0;
+    }
+
+    .info i {
+        color: #0d6efd;
+        width: 25px;
+    }
+
+    .badge-riasec {
+        background: #e8f1ff;
+        color: #0d6efd;
+        padding: 6px 12px;
+        border-radius: 20px;
+        font-size: 13px;
+        font-weight: 500;
+    }
+
+    /* Footer */
+
+    footer {
+        background: #111827;
+        color: white;
+        padding: 30px 0;
+        margin-top: 70px;
+        text-align: center;
+    }
+
+    footer p {
+        margin: 0;
+        color: #cbd5e1;
+    }
+
+    /* Responsive */
+
+    @media (max-width: 768px) {
+
+        .hero h1 {
+            font-size: 32px;
+        }
+
+        .hero p {
+            font-size: 16px;
+        }
+
+        .navbar-nav .nav-link {
+            margin-left: 0;
+        }
+    }
+
+</style>
+
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar navbar-expand-lg">
+
+
+<div class="container">
+
+    <a class="navbar-brand" href="index.html">
+        <i class="fa-solid fa-compass"></i>
+        CareerGuide
+    </a>
+
+    <button
+        class="navbar-toggler bg-light"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-label="Toggle navigation">
+
+        <span class="navbar-toggler-icon"></span>
+
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+
+        <ul class="navbar-nav ms-auto">
+
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">
+                    Home
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="about.html">
+                    About
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link active" href="career.html">
+                    Careers
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="courses.html">
+                    Courses
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="assessment.html">
+                    Assessment
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html">
+                    Contact
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="login.html">
+                    Login
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+</div>
+
+
+</nav>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+
+<div class="container">
+
+    <h1>Explore Your Career</h1>
+
+    <p>
+        Discover career paths that match your interests,
+        personality and skills.
+    </p>
+
+</div>
+
+
+</section>
+
+<!-- ================= SEARCH ================= -->
+
+<div class="container">
+
+
+<div class="search-box">
+
+    <div class="input-group">
+
+        <span class="input-group-text">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </span>
+
+        <input
+            type="text"
+            id="careerSearch"
+            class="form-control"
+            placeholder="Search careers...">
+
+    </div>
+
+</div>
+
+
+</div>
+
+<!-- ================= RIASEC TYPES ================= -->
+
+<section class="container mb-5">
+
+
+<div class="section-title">
+
+    <h2>RIASEC Career Types</h2>
+
+    <p>
+        Understand different personality types and their suitable careers.
+    </p>
+
+</div>
+
+<div class="row g-4">
+
+    <!-- Realistic -->
+
+    <div class="col-md-4 col-lg-2">
+
+        <div class="riasec-card">
+
+            <div class="riasec-icon">
+                <i class="fa-solid fa-gears"></i>
+            </div>
+
+            <h5>Realistic</h5>
+
+            <p>
+                Practical and hands-on
+                activities.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- Investigative -->
+
+    <div class="col-md-4 col-lg-2">
+
+        <div class="riasec-card">
+
+            <div class="riasec-icon">
+                <i class="fa-solid fa-flask"></i>
+            </div>
+
+            <h5>Investigative</h5>
+
+            <p>
+                Research and problem
+                solving.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- Artistic -->
+
+    <div class="col-md-4 col-lg-2">
+
+        <div class="riasec-card">
+
+            <div class="riasec-icon">
+                <i class="fa-solid fa-palette"></i>
+            </div>
+
+            <h5>Artistic</h5>
+
+            <p>
+                Creative and expressive
+                work.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- Social -->
+
+    <div class="col-md-4 col-lg-2">
+
+        <div class="riasec-card">
+
+            <div class="riasec-icon">
+                <i class="fa-solid fa-users"></i>
+            </div>
+
+            <h5>Social</h5>
+
+            <p>
+                Helping and teaching
+                others.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- Enterprising -->
+
+    <div class="col-md-4 col-lg-2">
+
+        <div class="riasec-card">
+
+            <div class="riasec-icon">
+                <i class="fa-solid fa-chart-line"></i>
+            </div>
+
+            <h5>Enterprising</h5>
+
+            <p>
+                Leadership and
+                business.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- Conventional -->
+
+    <div class="col-md-4 col-lg-2">
+
+        <div class="riasec-card">
+
+            <div class="riasec-icon">
+                <i class="fa-solid fa-file-lines"></i>
+            </div>
+
+            <h5>Conventional</h5>
+
+            <p>
+                Organizing data and
+                information.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+</section>
+
+<!-- ================= CAREERS ================= -->
+
+<section class="container">
+
+
+<div class="section-title">
+
+    <h2>Popular Career Options</h2>
+
+    <p>
+        Explore different career opportunities.
+    </p>
+
+</div>
+
+
+<div class="row g-4" id="careerList">
+
+
+    <!-- Software Developer -->
+
+    <div class="col-md-6 col-lg-4 career-item">
+
+        <div class="career-card">
+
+            <div class="career-header">
+
+                <i class="fa-solid fa-code"></i>
+
+                <h4>Software Developer</h4>
+
+            </div>
+
+            <div class="career-body">
+
+                <span class="badge-riasec">
+                    Investigative
+                </span>
+
+                <p class="mt-3">
+                    Design, develop and maintain
+                    software applications.
+                </p>
+
+                <div class="info">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    B.Tech / BCA / MCA
+                </div>
+
+                <div class="info">
+                    <i class="fa-solid fa-code"></i>
+                    Programming, Python, Java
+                </div>
+
+                <div class="info">
+                    <i class="fa-solid fa-indian-rupee-sign"></i>
+                    ₹4 - ₹12 LPA
+                </div>
+
+                <button
+                    class="btn btn-primary w-100 mt-3"
+                    onclick="showCareer('Software Developer')">
+
+                    View Details
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Data Analyst -->
+
+    <div class="col-md-6 col-lg-4 career-item">
+
+        <div class="career-card">
+
+            <div class="career-header">
+
+                <i class="fa-solid fa-chart-column"></i>
+
+                <h4>Data Analyst</h4>
+
+            </div>
+
+            <div class="career-body">
+
+                <span class="badge-riasec">
+                    Investigative
+                </span>
+
+                <p class="mt-3">
+                    Analyze data and generate
+                    useful business insights.
+                </p>
+
+                <div class="info">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    B.Tech / B.Sc / BCA
+                </div>
+
+                <div class="info">
+                    <i class="fa-solid fa-database"></i>
+                    SQL, Excel, Python
+                </div>
+
+                <div class="info">
+                    <i class="fa-solid fa-indian-rupee-sign"></i>
+                    ₹4 - ₹10 LPA
+                </div>
+
+                <button
+                    class="btn btn-primary w-100 mt-3"
+                    onclick="showCareer('Data Analyst')">
+
+                    View Details
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Police Officer -->
+
+    <div class="col-md-6 col-lg-4 career-item">
+
+        <div class="career-card">
+
+            <div class="career-header">
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+                <h4>Police Officer</h4>
+
+            </div>
+
+            <div class="career-body">
+
+                <span class="badge-riasec">
+                    Realistic
+                </span>
+
+                <p class="mt-3">
+                    Maintain law and order and
+                    protect the community.
+                </p>
+
+                <div class="info">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    Graduation
+                </div>
+
+                <div class="info">
+                    <i class="fa-solid fa-person-running"></i>
+                    Fitness, Discipline
+                </div>
+
+                <div class="info">
+                    <i class="fa-solid fa-building-columns"></i>
+                    Government Service
+                </div>
+
+                <button
+                    class="btn btn-primary w-100 mt-3"
+                    onclick="showCareer('Police Officer')">
+
+                    View Details
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Teacher -->
+
+    <div class="col-md-6 col-lg-4 career-item">
+
+        <div class="career-card">
+
+            <div class="career-header">
+
+                <i class="fa-solid fa-chalkboard-user"></i>
+
+                <h4>Teacher</h4>
+
+            </div>
+
+            <div class="career-body">
+
+                <span class="badge-riasec">
+                    Social
+                </span>
+
+                <p class="mt-3">
+                    Educate students and help
+                    them develop their skills.
+                </p>
+
+                <div class="info">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    Degree + B.Ed
+                </div>
+
+                <div class="info">
+                    <i class="fa-solid fa-users"></i>
+                    Communication
+                </div>
+
+                <div class="info">
+                    <i class="fa-solid fa-school"></i>
+                    Schools / Colleges
+                </div>
+
+                <button
+                    class="btn btn-primary w-100 mt-3"
+                    onclick="showCareer('Teacher')">
+
+                    View Details
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Graphic Designer -->
+
+    <div class="col-md-6 col-lg-4 career-item">
+
+        <div class="career-card">
+
+            <div class="career-header">
+
+                <i class="fa-solid fa-pen-nib"></i>
+
+                <h4>Graphic Designer</h4>
+
+            </div>
+
+            <div class="career-body">
+
+                <span class="badge-riasec">
+                    Artistic
+                </span>
+
+                <p class="mt-3">
+                    Create visual designs for
+                    brands and digital media.
+                </p>
+
+                <div class="info">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    Degree / Diploma
+                </div>
+
+                <div class="info">
+                    <i class="fa-solid fa-palette"></i>
+                    Photoshop, Illustrator
+                </div>
+
+                <div class="info">
+                    <i class="fa-solid fa-briefcase"></i>
+                    Agencies / Freelance
+                </div>
+
+                <button
+                    class="btn btn-primary w-100 mt-3"
+                    onclick="showCareer('Graphic Designer')">
+
+                    View Details
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Business Manager -->
+
+    <div class="col-md-6 col-lg-4 career-item">
+
+        <div class="career-card">
+
+            <div class="career-header">
+
+                <i class="fa-solid fa-user-tie"></i>
+
+                <h4>Business Manager</h4>
+
+            </div>
+
+            <div class="career-body">
+
+                <span class="badge-riasec">
+                    Enterprising
+                </span>
+
+                <p class="mt-3">
+                    Manage business operations,
+                    teams and organizational goals.
+                </p>
+
+                <div class="info">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    BBA / MBA / Graduation
+                </div>
+
+                <div class="info">
+                    <i class="fa-solid fa-users"></i>
+                    Leadership, Management
+                </div>
+
+                <div class="info">
+                    <i class="fa-solid fa-building"></i>
+                    Corporate / Business
+                </div>
+
+                <button
+                    class="btn btn-primary w-100 mt-3"
+                    onclick="showCareer('Business Manager')">
+
+                    View Details
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+</section>
+
+<!-- ================= CTA ================= -->
+
+<section class="container text-center mt-5">
+
+
+<div class="p-5 bg-white rounded-4 shadow-sm">
+
+    <h2>
+        Not Sure Which Career Is Right For You?
+    </h2>
+
+    <p class="text-muted mt-3">
+        Take our RIASEC assessment and discover careers
+        that match your interests and personality.
+    </p>
+
+    <a href="assessment.html"
+       class="btn btn-primary btn-lg mt-3">
+
+        <i class="fa-solid fa-clipboard-check"></i>
+        Take Assessment
+
+    </a>
+
+</div>
+
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+
+<div class="container">
+
+    <p>
+        © 2026 CareerGuide. All Rights Reserved.
+    </p>
+
+    <p class="mt-2">
+        Career Guidance and Recommendation System
+        using RIASEC Assessment
+    </p>
+
+</div>
+
+
+</footer>
+
+<!-- Bootstrap JS -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+    /* Career Search */
+
+    document
+        .getElementById("careerSearch")
+        .addEventListener("keyup", function () {
+
+            let searchValue =
+                this.value.toLowerCase();
+
+            let careers =
+                document.querySelectorAll(".career-item");
+
+            careers.forEach(function (career) {
+
+                let careerName =
+                    career.innerText.toLowerCase();
+
+                if (careerName.includes(searchValue)) {
+
+                    career.style.display = "";
+
+                } else {
+
+                    career.style.display = "none";
+
+                }
+
+            });
+
+        });
+
+
+    /* Career Details */
+
+    function showCareer(careerName) {
+
+        alert(
+            "You selected: " +
+            careerName +
+            "\n\nMore career details can be connected to the database later."
+        );
+
+    }
+
+</script>
+
+</body>
+
+</html>

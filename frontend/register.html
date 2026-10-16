@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Registration - CareerGuide</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+
+    <div class="container">
+
+        <a class="navbar-brand fw-bold" href="index.html">
+
+            <i class="fa-solid fa-graduation-cap"></i>
+
+            CareerGuide
+
+        </a>
+
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-label="Toggle navigation"
+        >
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+
+            <ul class="navbar-nav ms-auto">
+
+
+                <li class="nav-item">
+
+                    <a class="nav-link" href="index.html">
+
+                        Home
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a class="nav-link" href="about.html">
+
+                        About
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a class="nav-link" href="courses.html">
+
+                        Courses
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a class="nav-link" href="contact.html">
+
+                        Contact
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item ms-lg-2">
+
+                    <a
+                        class="btn btn-light text-primary"
+                        href="login.html"
+                    >
+
+                        Login
+
+                    </a>
+
+                </li>
+
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- ================= REGISTRATION ================= -->
+
+<section class="py-5 bg-light">
+
+    <div class="container">
+
+        <div class="row justify-content-center">
+
+            <div class="col-lg-7 col-md-9">
+
+                <div class="card border-0 shadow-lg">
+
+                    <div class="card-body p-4 p-md-5">
+
+
+                        <!-- Heading -->
+
+                        <div class="text-center mb-4">
+
+                            <div class="mb-3">
+
+                                <i
+                                    class="fa-solid fa-user-plus text-primary fa-3x"
+                                ></i>
+
+                            </div>
+
+
+                            <h2 class="fw-bold">
+
+                                Create Your Account
+
+                            </h2>
+
+
+                            <p class="text-muted">
+
+                                Register to start your career assessment
+
+                            </p>
+
+                        </div>
+
+
+
+                        <!-- ================= FORM ================= -->
+
+                        <form id="registrationForm">
+
+
+                            <!-- NAME -->
+
+                            <div class="mb-3">
+
+                                <label
+                                    for="fullName"
+                                    class="form-label fw-semibold"
+                                >
+
+                                    Full Name
+
+                                </label>
+
+
+                                <div class="input-group">
+
+                                    <span class="input-group-text">
+
+                                        <i class="fa-solid fa-user"></i>
+
+                                    </span>
+
+
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="fullName"
+                                        placeholder="Enter your full name"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- EMAIL -->
+
+                            <div class="mb-3">
+
+                                <label
+                                    for="email"
+                                    class="form-label fw-semibold"
+                                >
+
+                                    Email Address
+
+                                </label>
+
+
+                                <div class="input-group">
+
+                                    <span class="input-group-text">
+
+                                        <i class="fa-solid fa-envelope"></i>
+
+                                    </span>
+
+
+                                    <input
+                                        type="email"
+                                        class="form-control"
+                                        id="email"
+                                        placeholder="Enter your email"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- PHONE -->
+
+                            <div class="mb-3">
+
+                                <label
+                                    for="phone"
+                                    class="form-label fw-semibold"
+                                >
+
+                                    Phone Number
+
+                                </label>
+
+
+                                <div class="input-group">
+
+                                    <span class="input-group-text">
+
+                                        <i class="fa-solid fa-phone"></i>
+
+                                    </span>
+
+
+                                    <input
+                                        type="tel"
+                                        class="form-control"
+                                        id="phone"
+                                        placeholder="Enter 10 digit phone number"
+                                        maxlength="10"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- EDUCATION -->
+
+                            <div class="mb-3">
+
+                                <label
+                                    for="education"
+                                    class="form-label fw-semibold"
+                                >
+
+                                    Education
+
+                                </label>
+
+
+                                <select
+                                    class="form-select"
+                                    id="education"
+                                    required
+                                >
+
+                                    <option value="">
+
+                                        Select your education
+
+                                    </option>
+
+
+                                    <option value="10th">
+
+                                        10th
+
+                                    </option>
+
+
+                                    <option value="12th">
+
+                                        12th
+
+                                    </option>
+
+
+                                    <option value="diploma">
+
+                                        Diploma
+
+                                    </option>
+
+
+                                    <option value="undergraduate">
+
+                                        Undergraduate
+
+                                    </option>
+
+
+                                    <option value="postgraduate">
+
+                                        Postgraduate
+
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+
+                            <!-- PASSWORD -->
+
+                            <div class="mb-3">
+
+                                <label
+                                    for="password"
+                                    class="form-label fw-semibold"
+                                >
+
+                                    Password
+
+                                </label>
+
+
+                                <div class="input-group">
+
+                                    <span class="input-group-text">
+
+                                        <i class="fa-solid fa-lock"></i>
+
+                                    </span>
+
+
+                                    <input
+                                        type="password"
+                                        class="form-control"
+                                        id="password"
+                                        placeholder="Create a password"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- CONFIRM PASSWORD -->
+
+                            <div class="mb-3">
+
+                                <label
+                                    for="confirmPassword"
+                                    class="form-label fw-semibold"
+                                >
+
+                                    Confirm Password
+
+                                </label>
+
+
+                                <div class="input-group">
+
+                                    <span class="input-group-text">
+
+                                        <i class="fa-solid fa-lock"></i>
+
+                                    </span>
+
+
+                                    <input
+                                        type="password"
+                                        class="form-control"
+                                        id="confirmPassword"
+                                        placeholder="Confirm your password"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- TERMS -->
+
+                            <div class="form-check mb-4">
+
+                                <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    id="terms"
+                                    required
+                                >
+
+
+                                <label
+                                    class="form-check-label"
+                                    for="terms"
+                                >
+
+                                    I agree to the terms and conditions.
+
+                                </label>
+
+                            </div>
+
+
+
+                            <!-- BUTTON -->
+
+                            <div class="d-grid">
+
+                                <button
+                                    type="submit"
+                                    class="btn btn-primary btn-lg"
+                                >
+
+                                    <i class="fa-solid fa-user-plus"></i>
+
+                                    Create Account
+
+                                </button>
+
+                            </div>
+
+
+                        </form>
+
+
+
+                        <!-- LOGIN LINK -->
+
+                        <div class="text-center mt-4">
+
+                            <p class="mb-0">
+
+                                Already have an account?
+
+                                <a
+                                    href="login.html"
+                                    class="text-primary fw-semibold"
+                                >
+
+                                    Login here
+
+                                </a>
+
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="bg-dark text-white py-4">
+
+    <div class="container text-center">
+
+        <h5>
+
+            <i class="fa-solid fa-graduation-cap"></i>
+
+            CareerGuide
+
+        </h5>
+
+
+        <p class="mb-1">
+
+            Career Guidance and Recommendation System
+
+        </p>
+
+
+        <small class="text-secondary">
+
+            © 2026 CareerGuide. All Rights Reserved.
+
+        </small>
+
+    </div>
+
+</footer>
+
+
+
+<!-- Bootstrap JS -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+></script>
+
+
+
+<!-- ================= REGISTRATION JAVASCRIPT ================= -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const form = document.getElementById("registrationForm");
+
+
+    if (!form) {
+
+        console.error("registrationForm not found!");
+
+        return;
+
+    }
+
+
+    form.addEventListener("submit", async function (event) {
+
+        event.preventDefault();
+
+
+
+        // ================= GET FORM VALUES =================
+
+        const name =
+            document.getElementById("fullName").value.trim();
+
+        const email =
+            document.getElementById("email").value.trim();
+
+        const phone =
+            document.getElementById("phone").value.trim();
+
+        const education =
+            document.getElementById("education").value;
+
+        const password =
+            document.getElementById("password").value;
+
+        const confirmPassword =
+            document.getElementById("confirmPassword").value;
+
+        const terms =
+            document.getElementById("terms").checked;
+
+
+
+        // ================= VALIDATION =================
+
+        if (
+            !name ||
+            !email ||
+            !phone ||
+            !education ||
+            !password
+        ) {
+
+            alert("Please fill in all fields.");
+
+            return;
+
+        }
+
+
+        // Phone validation
+
+        if (
+            phone.length !== 10 ||
+            !/^[0-9]+$/.test(phone)
+        ) {
+
+            alert("Please enter a valid 10 digit phone number.");
+
+            return;
+
+        }
+
+
+        // Password validation
+
+        if (password !== confirmPassword) {
+
+            alert("Passwords do not match!");
+
+            return;
+
+        }
+
+
+        // Terms validation
+
+        if (!terms) {
+
+            alert("Please accept the terms and conditions.");
+
+            return;
+
+        }
+
+
+
+        // ================= SEND DATA TO FLASK =================
+
+        try {
+
+            const response = await fetch(
+                "http://127.0.0.1:5000/register",
+                {
+
+                    method: "POST",
+
+                    headers: {
+
+                        "Content-Type": "application/json"
+
+                    },
+
+                    body: JSON.stringify({
+
+                        name: name,
+
+                        email: email,
+
+                        phone: phone,
+
+                        education: education,
+
+                        password: password
+
+                    })
+
+                }
+            );
+
+
+
+            // Get response from Flask
+
+            const data = await response.json();
+
+
+            console.log(
+                "Registration response:",
+                data
+            );
+
+
+
+            // ================= SUCCESS =================
+
+            if (response.ok && data.success) {
+
+                alert("Registration successful!");
+
+
+                // Store user information
+
+                if (data.user) {
+
+                    localStorage.setItem(
+                        "user",
+                        JSON.stringify(data.user)
+                    );
+
+                }
+
+
+                // Go to login page
+
+                window.location.href =
+                    "login.html";
+
+            }
+
+
+            // ================= SERVER ERROR =================
+
+            else {
+
+                alert(
+                    data.message ||
+                    "Registration failed."
+                );
+
+            }
+
+        }
+
+
+        // ================= CONNECTION ERROR =================
+
+        catch (error) {
+
+            console.error(
+                "Registration Error:",
+                error
+            );
+
+
+            alert(
+                "Unable to connect to Flask server.\n\n" +
+                "Please make sure Flask is running on:\n" +
+                "http://127.0.0.1:5000"
+            );
+
+        }
+
+    });
+
+});
+
+</script>
+
+
+</body>
+
+</html>

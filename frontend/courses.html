@@ -1,0 +1,1381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Recommended Courses - CareerGuide</title>
+
+
+    <!-- Bootstrap -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <!-- Custom CSS -->
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+
+    <style>
+
+        /* ================= HEADER ================= */
+
+        .course-header {
+
+            background: linear-gradient(
+                135deg,
+                #0d6efd,
+                #084298
+            );
+
+            color: white;
+
+            border-radius: 15px;
+
+        }
+
+
+        /* ================= COURSE CARD ================= */
+
+        .course-card {
+
+            border: none;
+
+            border-radius: 15px;
+
+            height: 100%;
+
+            transition: 0.3s;
+
+        }
+
+
+        .course-card:hover {
+
+            transform: translateY(-7px);
+
+            box-shadow:
+                0 10px 25px
+                rgba(0, 0, 0, 0.12);
+
+        }
+
+
+        /* ================= COURSE ICON ================= */
+
+        .course-icon {
+
+            width: 65px;
+
+            height: 65px;
+
+            border-radius: 50%;
+
+            background: #e7f1ff;
+
+            color: #0d6efd;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 28px;
+
+        }
+
+
+        /* ================= RIASEC BOX ================= */
+
+        .riasec-box {
+
+            background: #f8f9fa;
+
+            border-left: 5px solid #0d6efd;
+
+            border-radius: 10px;
+
+        }
+
+
+        /* ================= COURSE TAG ================= */
+
+        .course-tag {
+
+            font-size: 13px;
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- ===================================================== -->
+<!-- NAVBAR -->
+<!-- ===================================================== -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+
+    <div class="container">
+
+
+        <a class="navbar-brand fw-bold"
+           href="index.html">
+
+            <i class="fa-solid fa-graduation-cap"></i>
+
+            CareerGuide
+
+        </a>
+
+
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-label="Toggle navigation">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <div class="collapse navbar-collapse"
+             id="navbarNav">
+
+            <ul class="navbar-nav ms-auto">
+
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                       href="index.html">
+
+                        Home
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                       href="profile.html">
+
+                        Profile
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                       href="assessment.html">
+
+                        Assessment
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                       href="result.html">
+
+                        Result
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                       href="career.html">
+
+                        Careers
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a class="nav-link active"
+                       href="courses.html">
+
+                        Courses
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- ===================================================== -->
+<!-- HEADER -->
+<!-- ===================================================== -->
+
+<section class="py-4">
+
+    <div class="container">
+
+        <div class="course-header shadow p-4 p-md-5">
+
+            <h1 class="fw-bold">
+
+                <i class="fa-solid fa-book-open"></i>
+
+                Recommended Courses
+
+            </h1>
+
+
+            <p class="mb-0">
+
+                Find courses that match your interests
+                and career direction.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ===================================================== -->
+<!-- RIASEC SUMMARY -->
+<!-- ===================================================== -->
+
+<section class="pb-4">
+
+    <div class="container">
+
+        <div class="riasec-box shadow-sm p-4">
+
+
+            <div class="row align-items-center">
+
+
+                <div class="col-md-8">
+
+                    <h4 class="fw-bold">
+
+                        Your Interest Type:
+
+                        <span class="badge bg-primary"
+                              id="riasecType">
+
+                            -
+
+                        </span>
+
+                    </h4>
+
+
+                    <p class="text-muted mb-0"
+                       id="riasecDescription">
+
+                        Your recommended courses
+                        will appear here.
+
+                    </p>
+
+                </div>
+
+
+                <div class="col-md-4 text-md-end mt-3 mt-md-0">
+
+                    <a href="result.html"
+                       class="btn btn-outline-primary">
+
+                        <i class="fa-solid fa-chart-column"></i>
+
+                        View Result
+
+                    </a>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ===================================================== -->
+<!-- RECOMMENDED COURSES -->
+<!-- ===================================================== -->
+
+<section class="bg-light py-5">
+
+    <div class="container">
+
+
+        <h2 class="fw-bold text-center">
+
+            Courses For You
+
+        </h2>
+
+
+        <p class="text-muted text-center mb-5">
+
+            These courses are selected according to
+            your RIASEC career-interest area.
+
+        </p>
+
+
+        <div class="row g-4"
+             id="courseContainer">
+
+            <!-- Courses generated by JavaScript -->
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ===================================================== -->
+<!-- ALL COURSE AREAS -->
+<!-- ===================================================== -->
+
+<section class="py-5">
+
+    <div class="container">
+
+
+        <h2 class="fw-bold text-center mb-5">
+
+            Explore Other Course Areas
+
+        </h2>
+
+
+        <div class="row g-4">
+
+
+            <!-- Technology -->
+
+            <div class="col-md-4">
+
+                <div class="card course-card shadow-sm">
+
+                    <div class="card-body p-4">
+
+                        <div class="course-icon mb-3">
+
+                            <i class="fa-solid fa-laptop-code"></i>
+
+                        </div>
+
+
+                        <h4 class="fw-bold">
+
+                            Technology
+
+                        </h4>
+
+
+                        <p class="text-muted">
+
+                            Programming, software development,
+                            data science, artificial intelligence
+                            and cybersecurity.
+
+                        </p>
+
+
+                        <span class="badge bg-primary">
+
+                            Technology
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Business -->
+
+            <div class="col-md-4">
+
+                <div class="card course-card shadow-sm">
+
+                    <div class="card-body p-4">
+
+                        <div class="course-icon mb-3">
+
+                            <i class="fa-solid fa-chart-line"></i>
+
+                        </div>
+
+
+                        <h4 class="fw-bold">
+
+                            Business & Management
+
+                        </h4>
+
+
+                        <p class="text-muted">
+
+                            Business management, marketing,
+                            finance, entrepreneurship and sales.
+
+                        </p>
+
+
+                        <span class="badge bg-primary">
+
+                            Business
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Creative -->
+
+            <div class="col-md-4">
+
+                <div class="card course-card shadow-sm">
+
+                    <div class="card-body p-4">
+
+                        <div class="course-icon mb-3">
+
+                            <i class="fa-solid fa-palette"></i>
+
+                        </div>
+
+
+                        <h4 class="fw-bold">
+
+                            Creative & Design
+
+                        </h4>
+
+
+                        <p class="text-muted">
+
+                            Graphic design, UI/UX design,
+                            animation, video editing and content creation.
+
+                        </p>
+
+
+                        <span class="badge bg-primary">
+
+                            Creative
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ===================================================== -->
+<!-- FOOTER -->
+<!-- ===================================================== -->
+
+<footer class="bg-dark text-white py-4">
+
+    <div class="container text-center">
+
+
+        <h5>
+
+            <i class="fa-solid fa-graduation-cap"></i>
+
+            CareerGuide
+
+        </h5>
+
+
+        <p class="mb-1">
+
+            Career Guidance and Recommendation System
+
+        </p>
+
+
+        <small class="text-secondary">
+
+            © 2026 CareerGuide. All Rights Reserved.
+
+        </small>
+
+
+    </div>
+
+</footer>
+
+
+
+<!-- Bootstrap JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+
+<!-- ===================================================== -->
+<!-- COURSE JAVASCRIPT -->
+<!-- ===================================================== -->
+
+<script>
+
+
+/* ===================================================== */
+/* GET RIASEC SCORE */
+/* ===================================================== */
+
+const savedScores =
+    localStorage.getItem("riasecScores");
+
+
+const scores = { R: 0, I: 0, A: 0, S: 0, E: 0, C: 0 };
+
+if (savedScores) {
+
+    try {
+
+        const parsedScores = JSON.parse(savedScores);
+        const scoreTypes = ["R", "I", "A", "S", "E", "C"];
+
+        if (
+            !parsedScores ||
+            typeof parsedScores !== "object" ||
+            scoreTypes.some(function(type) {
+                return !Number.isFinite(Number(parsedScores[type]));
+            })
+        ) {
+            throw new Error("Invalid assessment scores");
+        }
+
+        scoreTypes.forEach(function(type) {
+            scores[type] = Number(parsedScores[type]);
+        });
+
+    } catch (error) {
+
+        localStorage.removeItem("riasecScores");
+
+    }
+
+}
+
+
+
+/* ===================================================== */
+/* FIND HIGHEST SCORE */
+/* ===================================================== */
+
+let highestType = "R";
+
+let highestScore = scores.R;
+
+
+for (const type in scores) {
+
+    if (scores[type] > highestScore) {
+
+        highestScore =
+            scores[type];
+
+        highestType =
+            type;
+
+    }
+
+}
+
+
+
+/* ===================================================== */
+/* COURSE DATA */
+/* ===================================================== */
+
+const courseData = {
+
+
+    /* ================= REALISTIC ================= */
+
+    R: {
+
+        name: "Realistic",
+
+        description:
+            "You prefer practical and hands-on activities.",
+
+        courses: [
+
+            {
+                name: "Mechanical Engineering",
+
+                icon: "fa-gears",
+
+                level: "Degree",
+
+                duration: "4 Years",
+
+                description:
+                    "Learn mechanical systems, machines, manufacturing and engineering design."
+            },
+
+
+            {
+                name: "Automobile Engineering",
+
+                icon: "fa-car",
+
+                level: "Degree / Diploma",
+
+                duration: "2–4 Years",
+
+                description:
+                    "Study vehicle design, automobile systems and automotive technology."
+            },
+
+
+            {
+                name: "Electrical Engineering",
+
+                icon: "fa-bolt",
+
+                level: "Degree / Diploma",
+
+                duration: "2–4 Years",
+
+                description:
+                    "Learn electrical systems, circuits, power systems and electronics."
+            },
+
+
+            {
+                name: "Civil Engineering",
+
+                icon: "fa-building",
+
+                level: "Degree",
+
+                duration: "4 Years",
+
+                description:
+                    "Study construction, structures, infrastructure and civil engineering."
+            }
+
+        ]
+
+    },
+
+
+    /* ================= INVESTIGATIVE ================= */
+
+    I: {
+
+        name: "Investigative",
+
+        description:
+            "You enjoy research, analysis, science and solving complex problems.",
+
+        courses: [
+
+            {
+                name: "Data Science",
+
+                icon: "fa-chart-line",
+
+                level: "Degree / Certification",
+
+                duration: "6 Months – 4 Years",
+
+                description:
+                    "Learn data analysis, statistics, Python, machine learning and visualization."
+            },
+
+
+            {
+                name: "Artificial Intelligence",
+
+                icon: "fa-brain",
+
+                level: "Degree / Certification",
+
+                duration: "6 Months – 4 Years",
+
+                description:
+                    "Learn machine learning, neural networks and AI applications."
+            },
+
+
+            {
+                name: "Computer Science",
+
+                icon: "fa-laptop-code",
+
+                level: "Degree",
+
+                duration: "4 Years",
+
+                description:
+                    "Study programming, algorithms, databases, software and computer systems."
+            },
+
+
+            {
+                name: "Research & Analytics",
+
+                icon: "fa-flask",
+
+                level: "Certification",
+
+                duration: "3–12 Months",
+
+                description:
+                    "Develop analytical, research and problem-solving skills."
+            }
+
+        ]
+
+    },
+
+
+    /* ================= ARTISTIC ================= */
+
+    A: {
+
+        name: "Artistic",
+
+        description:
+            "You enjoy creativity, design, self-expression and innovative activities.",
+
+        courses: [
+
+            {
+                name: "Graphic Design",
+
+                icon: "fa-pen-nib",
+
+                level: "Certification",
+
+                duration: "3–12 Months",
+
+                description:
+                    "Learn visual communication, branding, typography and digital design."
+            },
+
+
+            {
+                name: "UI/UX Design",
+
+                icon: "fa-object-group",
+
+                level: "Certification",
+
+                duration: "3–12 Months",
+
+                description:
+                    "Learn user interface and user experience design for digital products."
+            },
+
+
+            {
+                name: "Animation",
+
+                icon: "fa-film",
+
+                level: "Certification / Degree",
+
+                duration: "1–4 Years",
+
+                description:
+                    "Learn 2D, 3D animation, visual effects and digital storytelling."
+            },
+
+
+            {
+                name: "Digital Media",
+
+                icon: "fa-camera",
+
+                level: "Certification",
+
+                duration: "3–12 Months",
+
+                description:
+                    "Learn photography, video editing and digital content creation."
+            }
+
+        ]
+
+    },
+
+
+    /* ================= SOCIAL ================= */
+
+    S: {
+
+        name: "Social",
+
+        description:
+            "You enjoy helping, teaching and communicating with people.",
+
+        courses: [
+
+            {
+                name: "Education & Teaching",
+
+                icon: "fa-chalkboard-user",
+
+                level: "Degree / Certification",
+
+                duration: "1–4 Years",
+
+                description:
+                    "Develop teaching, communication and classroom management skills."
+            },
+
+
+            {
+                name: "Psychology",
+
+                icon: "fa-comments",
+
+                level: "Degree",
+
+                duration: "3–4 Years",
+
+                description:
+                    "Study human behavior, psychology and mental processes."
+            },
+
+
+            {
+                name: "Human Resources",
+
+                icon: "fa-users",
+
+                level: "Degree / Certification",
+
+                duration: "1–2 Years",
+
+                description:
+                    "Learn recruitment, employee management and organizational behavior."
+            },
+
+
+            {
+                name: "Social Work",
+
+                icon: "fa-hand-holding-heart",
+
+                level: "Degree",
+
+                duration: "3–4 Years",
+
+                description:
+                    "Learn how to support individuals, communities and social development."
+            }
+
+        ]
+
+    },
+
+
+    /* ================= ENTERPRISING ================= */
+
+    E: {
+
+        name: "Enterprising",
+
+        description:
+            "You enjoy leadership, business, persuasion and decision-making.",
+
+        courses: [
+
+            {
+                name: "Business Management",
+
+                icon: "fa-briefcase",
+
+                level: "Degree",
+
+                duration: "3–4 Years",
+
+                description:
+                    "Learn business operations, management and organizational strategy."
+            },
+
+
+            {
+                name: "Marketing",
+
+                icon: "fa-bullhorn",
+
+                level: "Degree / Certification",
+
+                duration: "3–12 Months",
+
+                description:
+                    "Learn digital marketing, branding, advertising and customer behavior."
+            },
+
+
+            {
+                name: "Entrepreneurship",
+
+                icon: "fa-lightbulb",
+
+                level: "Certification / Degree",
+
+                duration: "3–12 Months",
+
+                description:
+                    "Learn business planning, startup development and entrepreneurship."
+            },
+
+
+            {
+                name: "Finance & Banking",
+
+                icon: "fa-building-columns",
+
+                level: "Degree / Certification",
+
+                duration: "1–4 Years",
+
+                description:
+                    "Learn finance, banking, investment and financial management."
+            }
+
+        ]
+
+    },
+
+
+    /* ================= CONVENTIONAL ================= */
+
+    C: {
+
+        name: "Conventional",
+
+        description:
+            "You prefer organized work involving information, numbers and structured procedures.",
+
+        courses: [
+
+            {
+                name: "Accounting",
+
+                icon: "fa-calculator",
+
+                level: "Degree / Certification",
+
+                duration: "1–4 Years",
+
+                description:
+                    "Learn accounting principles, financial records and taxation."
+            },
+
+
+            {
+                name: "Banking & Finance",
+
+                icon: "fa-building-columns",
+
+                level: "Degree / Certification",
+
+                duration: "1–4 Years",
+
+                description:
+                    "Study banking operations, finance and financial services."
+            },
+
+
+            {
+                name: "Business Administration",
+
+                icon: "fa-briefcase",
+
+                level: "Degree",
+
+                duration: "3–4 Years",
+
+                description:
+                    "Learn administration, management, business operations and organization."
+            },
+
+
+            {
+                name: "Data Management",
+
+                icon: "fa-database",
+
+                level: "Certification",
+
+                duration: "3–12 Months",
+
+                description:
+                    "Learn databases, data organization and information management."
+            }
+
+        ]
+
+    }
+
+};
+
+
+
+/* ===================================================== */
+/* GET CURRENT COURSE DATA */
+/* ===================================================== */
+
+const currentData =
+    courseData[highestType];
+
+
+
+/* ===================================================== */
+/* DISPLAY RIASEC TYPE */
+/* ===================================================== */
+
+document.getElementById("riasecType")
+    .textContent =
+    highestType + " - " + currentData.name;
+
+
+document.getElementById("riasecDescription")
+    .textContent =
+    currentData.description;
+
+
+
+/* ===================================================== */
+/* CREATE COURSE CARDS */
+/* ===================================================== */
+
+const courseContainer =
+    document.getElementById(
+        "courseContainer"
+    );
+
+
+currentData.courses.forEach(function(course) {
+
+
+    const div =
+        document.createElement("div");
+
+
+    div.className =
+        "col-md-6 col-lg-3";
+
+
+    div.innerHTML = `
+
+        <div class="card course-card shadow-sm">
+
+            <div class="card-body p-4">
+
+
+                <div class="course-icon mb-3">
+
+                    <i class="fa-solid ${course.icon}"></i>
+
+                </div>
+
+
+                <h5 class="fw-bold">
+
+                    ${course.name}
+
+                </h5>
+
+
+                <div class="mb-2">
+
+                    <span class="badge bg-primary course-tag">
+
+                        ${course.level}
+
+                    </span>
+
+                    <span class="badge bg-secondary course-tag">
+
+                        ${course.duration}
+
+                    </span>
+
+                </div>
+
+
+                <p class="text-muted">
+
+                    ${course.description}
+
+                </p>
+
+
+                <button
+                    class="btn btn-outline-primary btn-sm"
+                    onclick="showCourse('${course.name}')">
+
+                    <i class="fa-solid fa-circle-info"></i>
+
+                    View Details
+
+                </button>
+
+
+            </div>
+
+        </div>
+
+    `;
+
+
+    courseContainer.appendChild(div);
+
+});
+
+
+
+/* ===================================================== */
+/* COURSE DETAILS */
+/* ===================================================== */
+
+function showCourse(courseName) {
+
+    const course = loadedCourses[courseName];
+
+    if (!course) {
+        return;
+    }
+
+    alert(
+        course.name +
+        "\n" + course.level +
+        "\n" + course.duration +
+        "\n\n" + course.description
+    );
+
+}
+
+
+const loadedCourses = {};
+
+async function loadCoursesFromDatabase() {
+
+    courseContainer.innerHTML = `
+        <div class="col-12 text-center py-4" role="status">
+            <span class="spinner-border text-primary me-2" aria-hidden="true"></span>
+            Loading your recommended courses...
+        </div>
+    `;
+
+    try {
+
+        const assessmentResponse = await fetch(
+            "http://127.0.0.1:5000/assessment/latest",
+            { credentials: "include" }
+        );
+
+        if (assessmentResponse.status === 401) {
+            alert("Please log in to load your saved assessment and course recommendations.");
+            window.location.href = "login.html";
+            return;
+        }
+
+        const assessmentData = await assessmentResponse.json();
+
+        if (!assessmentResponse.ok || !assessmentData.success) {
+            throw new Error(assessmentData.message || "Could not load your saved assessment.");
+        }
+
+        if (!assessmentData.assessment) {
+            alert("Complete the RIASEC assessment to see personalized courses.");
+            window.location.href = "assessment.html";
+            return;
+        }
+
+        const databaseScores = assessmentData.assessment.scores;
+        const scoreTypes = ["R", "I", "A", "S", "E", "C"];
+        const recommendationType = scoreTypes.reduce(function(currentHighest, type) {
+            return databaseScores[type] > databaseScores[currentHighest]
+                ? type
+                : currentHighest;
+        }, scoreTypes[0]);
+
+        localStorage.setItem("riasecScores", JSON.stringify(databaseScores));
+
+        const catalogResponse = await fetch(
+            "http://127.0.0.1:5000/courses?type=" + recommendationType
+        );
+        const catalogData = await catalogResponse.json();
+
+        if (!catalogResponse.ok || !catalogData.success) {
+            throw new Error(catalogData.message || "Could not load courses from the database.");
+        }
+
+        document.getElementById("riasecType").textContent =
+            recommendationType + " - " + catalogData.categoryName;
+        document.getElementById("riasecDescription").textContent =
+            catalogData.categoryDescription;
+
+        courseContainer.replaceChildren();
+
+        if (!catalogData.courses.length) {
+            courseContainer.innerHTML =
+                '<div class="col-12 text-center text-muted">No courses are available for this interest type yet.</div>';
+            return;
+        }
+
+        catalogData.courses.forEach(function(course) {
+
+            loadedCourses[course.name] = course;
+
+            const column = document.createElement("div");
+            column.className = "col-md-6 col-lg-3";
+
+            const card = document.createElement("div");
+            card.className = "card course-card shadow-sm";
+
+            const cardBody = document.createElement("div");
+            cardBody.className = "card-body p-4";
+
+            const iconWrap = document.createElement("div");
+            iconWrap.className = "course-icon mb-3";
+            const icon = document.createElement("i");
+            icon.className = "fa-solid " + course.icon;
+            iconWrap.appendChild(icon);
+
+            const title = document.createElement("h5");
+            title.className = "fw-bold";
+            title.textContent = course.name;
+
+            const tags = document.createElement("div");
+            tags.className = "mb-2";
+
+            const level = document.createElement("span");
+            level.className = "badge bg-primary course-tag me-1";
+            level.textContent = course.level;
+
+            const duration = document.createElement("span");
+            duration.className = "badge bg-secondary course-tag";
+            duration.textContent = course.duration;
+            tags.append(level, duration);
+
+            const description = document.createElement("p");
+            description.className = "text-muted";
+            description.textContent = course.description;
+
+            const detailsButton = document.createElement("button");
+            detailsButton.type = "button";
+            detailsButton.className = "btn btn-outline-primary btn-sm";
+            detailsButton.textContent = "View Details";
+            detailsButton.addEventListener("click", function() {
+                showCourse(course.name);
+            });
+
+            cardBody.append(iconWrap, title, tags, description, detailsButton);
+            card.appendChild(cardBody);
+            column.appendChild(card);
+            courseContainer.appendChild(column);
+
+        });
+
+    } catch (error) {
+
+        courseContainer.innerHTML = `
+            <div class="col-12">
+                <div class="alert alert-danger mb-0" role="alert">
+                    ${error.message.includes("fetch")
+                        ? "Could not connect to the backend. Make sure Flask and MySQL are running."
+                        : error.message}
+                </div>
+            </div>
+        `;
+
+    }
+
+}
+
+loadCoursesFromDatabase();
+
+
+</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RIASEC Assessment - CareerGuide</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+
+        .assessment-header {
+            background: linear-gradient(135deg, #0d6efd, #084298);
+            color: white;
+            border-radius: 15px;
+        }
+
+        .question-card {
+            border: none;
+            border-radius: 15px;
+            transition: 0.3s;
+        }
+
+        .question-card:hover {
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .question-number {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: #0d6efd;
+            color: white;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .rating-option {
+            cursor: pointer;
+        }
+
+        .rating-option input {
+            display: none;
+        }
+
+        .rating-label {
+            display: inline-block;
+            padding: 10px 16px;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.2s;
+            min-width: 70px;
+            text-align: center;
+        }
+
+        .rating-label:hover {
+            background: #e7f1ff;
+            border-color: #0d6efd;
+        }
+
+        .rating-option input:checked + .rating-label {
+            background: #0d6efd;
+            color: white;
+            border-color: #0d6efd;
+        }
+
+        .category-title {
+            border-left: 5px solid #0d6efd;
+            padding-left: 15px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+
+    <div class="container">
+
+        <a class="navbar-brand fw-bold" href="index.html">
+
+            <i class="fa-solid fa-graduation-cap"></i>
+
+            CareerGuide
+
+        </a>
+
+
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-label="Toggle navigation">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="profile.html">
+                        Profile
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="assessment.html">
+                        Assessment
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="result.html">
+                        Result
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="career.html">
+                        Career
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="courses.html">
+                        Courses
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="login.html"
+                       onclick="logoutAssessmentUser(); return false;">
+                        Logout
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- ================= HEADER ================= -->
+
+<section class="py-4">
+
+    <div class="container">
+
+        <div class="assessment-header p-4 p-md-5 shadow">
+
+            <h1 class="fw-bold">
+
+                <i class="fa-solid fa-clipboard-question"></i>
+
+                RIASEC Career Assessment
+
+            </h1>
+
+            <p class="mb-2">
+
+                Answer each question based on how much you enjoy
+                or would like to do the activity.
+
+            </p>
+
+            <small>
+
+                There are no right or wrong answers.
+
+            </small>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= RATING GUIDE ================= -->
+
+<section>
+
+    <div class="container">
+
+        <div class="card border-0 shadow-sm mb-4">
+
+            <div class="card-body">
+
+                <h5 class="fw-bold">
+                    Rating Guide
+                </h5>
+
+                <div class="row text-center mt-3">
+
+                    <div class="col">
+                        <strong>1</strong>
+                        <br>
+                        <small>Strongly Dislike</small>
+                    </div>
+
+                    <div class="col">
+                        <strong>2</strong>
+                        <br>
+                        <small>Dislike</small>
+                    </div>
+
+                    <div class="col">
+                        <strong>3</strong>
+                        <br>
+                        <small>Neutral</small>
+                    </div>
+
+                    <div class="col">
+                        <strong>4</strong>
+                        <br>
+                        <small>Like</small>
+                    </div>
+
+                    <div class="col">
+                        <strong>5</strong>
+                        <br>
+                        <small>Strongly Like</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ASSESSMENT FORM ================= -->
+
+<section class="pb-5">
+
+<div class="container">
+
+<form id="riasecForm">
+
+
+<!-- ================= REALISTIC ================= -->
+
+<h3 class="category-title fw-bold mb-4 mt-4">
+    R — Realistic
+</h3>
+
+
+<div class="card question-card shadow-sm mb-3">
+
+<div class="card-body">
+
+<p class="fw-semibold">
+<span class="question-number">1</span>
+I enjoy working with tools, machines, or equipment.
+</p>
+
+<div class="text-center">
+
+<label class="rating-option">
+<input type="radio" name="q1" value="1">
+<span class="rating-label">1</span>
+</label>
+
+<label class="rating-option">
+<input type="radio" name="q1" value="2">
+<span class="rating-label">2</span>
+</label>
+
+<label class="rating-option">
+<input type="radio" name="q1" value="3">
+<span class="rating-label">3</span>
+</label>
+
+<label class="rating-option">
+<input type="radio" name="q1" value="4">
+<span class="rating-label">4</span>
+</label>
+
+<label class="rating-option">
+<input type="radio" name="q1" value="5">
+<span class="rating-label">5</span>
+</label>
+
+</div>
+
+</div>
+</div>
+
+
+<div class="card question-card shadow-sm mb-3">
+
+<div class="card-body">
+
+<p class="fw-semibold">
+<span class="question-number">2</span>
+I enjoy building or repairing physical objects.
+</p>
+
+<div class="text-center">
+
+<label class="rating-option"><input type="radio" name="q2" value="1"><span class="rating-label">1</span></label>
+<label class="rating-option"><input type="radio" name="q2" value="2"><span class="rating-label">2</span></label>
+<label class="rating-option"><input type="radio" name="q2" value="3"><span class="rating-label">3</span></label>
+<label class="rating-option"><input type="radio" name="q2" value="4"><span class="rating-label">4</span></label>
+<label class="rating-option"><input type="radio" name="q2" value="5"><span class="rating-label">5</span></label>
+
+</div>
+
+</div>
+</div>
+
+
+<div class="card question-card shadow-sm mb-3">
+
+<div class="card-body">
+
+<p class="fw-semibold">
+<span class="question-number">3</span>
+I like working outdoors and doing practical activities.
+</p>
+
+<div class="text-center">
+
+<label class="rating-option"><input type="radio" name="q3" value="1"><span class="rating-label">1</span></label>
+<label class="rating-option"><input type="radio" name="q3" value="2"><span class="rating-label">2</span></label>
+<label class="rating-option"><input type="radio" name="q3" value="3"><span class="rating-label">3</span></label>
+<label class="rating-option"><input type="radio" name="q3" value="4"><span class="rating-label">4</span></label>
+<label class="rating-option"><input type="radio" name="q3" value="5"><span class="rating-label">5</span></label>
+
+</div>
+
+</div>
+</div>
+
+
+<div class="card question-card shadow-sm mb-4">
+
+<div class="card-body">
+
+<p class="fw-semibold">
+<span class="question-number">4</span>
+I enjoy operating machines or technical equipment.
+</p>
+
+<div class="text-center">
+
+<label class="rating-option"><input type="radio" name="q4" value="1"><span class="rating-label">1</span></label>
+<label class="rating-option"><input type="radio" name="q4" value="2"><span class="rating-label">2</span></label>
+<label class="rating-option"><input type="radio" name="q4" value="3"><span class="rating-label">3</span></label>
+<label class="rating-option"><input type="radio" name="q4" value="4"><span class="rating-label">4</span></label>
+<label class="rating-option"><input type="radio" name="q4" value="5"><span class="rating-label">5</span></label>
+
+</div>
+
+</div>
+</div>
+
+
+<!-- ================= INVESTIGATIVE ================= -->
+
+<h3 class="category-title fw-bold mb-4 mt-5">
+    I — Investigative
+</h3>
+
+
+<div id="investigativeQuestions"></div>
+
+
+<!-- ================= ARTISTIC ================= -->
+
+<h3 class="category-title fw-bold mb-4 mt-5">
+    A — Artistic
+</h3>
+
+
+<div id="artisticQuestions"></div>
+
+
+<!-- ================= SOCIAL ================= -->
+
+<h3 class="category-title fw-bold mb-4 mt-5">
+    S — Social
+</h3>
+
+
+<div id="socialQuestions"></div>
+
+
+<!-- ================= ENTERPRISING ================= -->
+
+<h3 class="category-title fw-bold mb-4 mt-5">
+    E — Enterprising
+</h3>
+
+
+<div id="enterprisingQuestions"></div>
+
+
+<!-- ================= CONVENTIONAL ================= -->
+
+<h3 class="category-title fw-bold mb-4 mt-5">
+    C — Conventional
+</h3>
+
+
+<div id="conventionalQuestions"></div>
+
+
+<!-- ================= SUBMIT ================= -->
+
+<div class="text-center mt-5">
+
+<button type="submit"
+        class="btn btn-primary btn-lg px-5">
+
+    <i class="fa-solid fa-chart-column"></i>
+
+    Submit Assessment
+
+</button>
+
+</div>
+
+
+</form>
+
+</div>
+
+</section>
+
+
+<!-- Footer -->
+
+<footer class="bg-dark text-white py-4">
+
+<div class="container text-center">
+
+<h5>
+<i class="fa-solid fa-graduation-cap"></i>
+CareerGuide
+</h5>
+
+<p class="mb-1">
+Career Guidance and Recommendation System
+</p>
+
+<small class="text-secondary">
+© 2026 CareerGuide. All Rights Reserved.
+</small>
+
+</div>
+
+</footer>
+
+
+<!-- Bootstrap -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+<!-- Assessment JS -->
+
+<script src="js/assessment.js"></script>
+
+</body>
+</html>
